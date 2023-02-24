@@ -12,15 +12,11 @@ public class TwoSumArray {
         for(int i=0;i<n;i++){
             nums[i] = sc.nextInt();
         }
-        twoSum(nums,target);
 
-    }
-    public static int[] twoSum(int[] nums, int target) {
         int[] ans = new int[2];
         if(nums.length==2){
             ans[0]=0;
             ans[1]=1;
-            return ans;
         }
         for(int i=0;i<nums.length;i++){
             for(int j=i+1;j<nums.length;j++)
@@ -28,10 +24,11 @@ public class TwoSumArray {
                 {
                     ans[0]=i;
                     ans[1]=j;
-                    return ans;
                 }
         }
-
-        return ans;
+        System.out.println("Index Position: ");
+        for (int val : ans) {
+            System.out.print(val + " ");
+        }
     }
 }
